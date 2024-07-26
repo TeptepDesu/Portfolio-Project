@@ -50,7 +50,7 @@ const ProjectsSection = () => {
                 ? igsmImage
                 : "" // Handle other cases or provide a default image
             }
-            projectUrl={project.projectUrl} // Pass projectUrl to Card component
+            projectUrl={project.projectUrl}
           />
         ))}
       </Box>

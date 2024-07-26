@@ -1,0 +1,46 @@
+.card-container {
+    overflow: hidden; /* Prevent image overflow when zoomed */
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card-image {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    display: block; /* Ensure the image displays as a block element */
+  }
+  
+  .card-container:hover .card-image {
+    transform: scale(1.02); /* Zoom the image */
+  }
+  
+  .card-link {
+    position: relative;
+    display: inline-block;
+    color: #007bff; /* Adjust the color as needed */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .card-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #007bff; /* Adjust the color as needed */
+    transition: width 0.3s ease;
+  }
+  
+  .card-container:hover .card-link::after {
+    width: 100%;
+    left: 0;
+    background: #007bff; /* Adjust the color as needed */
+  }
+  
+  .card-container:hover .card-link {
+    color: #0056b3; /* Darker color on hover, optional */
+  }
+  

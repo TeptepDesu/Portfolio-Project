@@ -12,7 +12,7 @@ import { Box, HStack } from "@chakra-ui/react";
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: caballerojosephirah@gmail.com",
+    url: "mailto:caballerojosephirah@gmail.com",
   },
   {
     icon: faGithub,
@@ -36,7 +36,8 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const lastScrollY = useRef(0);
 
-  const handleClick = (anchor) => () => {
+  const handleClick = (anchor) => (event) => {
+    event.preventDefault(); // Prevent the default link behavior
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -94,8 +95,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="/#projects" onClick={handleClick("projects")}>Projects</a>
-              <a href="/#contactme" onClick={handleClick("contactme")}>Contact Me</a>
+              <a href="#projects" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contactme" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
         </HStack>
