@@ -4,6 +4,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 import agapeleoImage from "../image/agapeleo-image.png";
 import igsmImage from "../image/igsm-image.png";
+import ecoimage from "../image/ecommerce-image.png";
 
 const projects = [
   {
@@ -17,6 +18,12 @@ const projects = [
     description:
       "EQUIPPING CHRISTIAN LEADERS For the Kingdom Ministry of the Lord in World Mission",
     projectUrl: "https://www.igsm-ph.org/",
+  },
+  {
+    title: "E-Commerce Project",
+    description:
+      "Ongoing Backend Properties",
+    projectUrl: "https://teptepdesu.github.io/mens",
   },
   // Add more projects as needed
 ];
@@ -48,6 +55,8 @@ const ProjectsSection = () => {
                 ? agapeleoImage
                 : project.projectUrl === "https://www.igsm-ph.org/"
                 ? igsmImage
+                : project.projectUrl === "https://teptepdesu.github.io/mens"
+                ? ecoimage
                 : "" // Handle other cases or provide a default image
             }
             projectUrl={project.projectUrl}
