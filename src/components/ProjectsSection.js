@@ -23,7 +23,7 @@ const projects = [
     title: "E-Commerce Project",
     description:
       "Ongoing Backend Properties",
-    projectUrl: "https://teptepdesu.github.io/mens",
+    projectUrl: "https://teptepdesu.github.io/Ecommorce-project/",
   },
   // Add more projects as needed
 ];
@@ -55,7 +55,7 @@ const ProjectsSection = () => {
                 ? agapeleoImage
                 : project.projectUrl === "https://www.igsm-ph.org/"
                 ? igsmImage
-                : project.projectUrl === "https://teptepdesu.github.io/mens"
+                : project.projectUrl === "https://teptepdesu.github.io/Ecommorce-project/"
                 ? ecoimage
                 : "" // Handle other cases or provide a default image
             }
